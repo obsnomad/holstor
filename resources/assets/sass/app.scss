@@ -1,0 +1,16 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Additional scripts
+@import "~owl.carousel2/dist/assets/owl.carousel.min";
+@import "~owl.carousel2/dist/assets/owl.theme.default.min";
+@import "~magnific-popup/src/css/main";
+
+// Main styles
+@import "general";
