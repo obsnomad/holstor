@@ -54,7 +54,7 @@ class Location
     public $seo;
     protected $data;
 
-    public function __construct($data)
+    public function __construct($data = null)
     {
         $this->data = (array)$data;
         foreach ([
