@@ -57,6 +57,7 @@ class Locations
                 'phone' => '+7 (900) 933-15-44',
                 'email' => [
                     'voronezh@holstor.ru',
+                    'holstor36@gmail.com',
                     'a.pravotorov@gmail.com',
                     'dudina-anna@yandex.ru',
                 ],

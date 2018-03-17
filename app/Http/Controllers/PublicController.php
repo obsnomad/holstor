@@ -42,12 +42,12 @@ class PublicController extends Controller
             'phone' => 'required',
             'email' => 'email',
         ]);
-        $result = \Mail::to($this->location->email)
+        \Mail::to($this->location->email)
             ->send(new Request('Заказ картины', $data['name'], $data['phone'], $data['email'], \Request::ip(), $this->location->name));
-        if ($result) {
-            return response()->json(['result' => $result]);
+        if (!\Mail::failures()) {
+            return response()->json(['result' => true]);
         }
-        return abort(500);
+        return abort(500, implode(', ', \Mail::failures()));
     }
 
     public function franch()
