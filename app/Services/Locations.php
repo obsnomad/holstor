@@ -17,7 +17,12 @@ class Locations
                 'code' => 'belgorod',
                 'name' => 'Белгород',
                 'nameForm' => 'Белгороде',
-                //'email' => 'holstor@yandex.ru, holstor31@gmail.com, a.pravotorov@gmail.com, dudina-anna@yandex.ru',
+                /*                'email' => [
+                                    'holstor@yandex.ru',
+                                    'holstor31@gmail.com',
+                                    'a.pravotorov@gmail.com',
+                                    'dudina-anna@yandex.ru',
+                                ],*/
                 'email' => 'akatelnikov@yandex.ru',
                 'vk' => 'holstor31',
                 'address' => 'Белгород, просп. Богдана Хмельницкого, 137Т, ТРЦ «Мега ГРИНН», 1 этаж, возле магазина Летуаль',
@@ -32,7 +37,11 @@ class Locations
                 'code' => 'oskol',
                 'name' => 'Старый Оскол',
                 'nameForm' => 'Старом Осколе',
-                'email' => 'oskol@holstor.ru, a.pravotorov@gmail.com, dudina-anna@yandex.ru',
+                'email' => [
+                    'oskol@holstor.ru',
+                    'a.pravotorov@gmail.com',
+                    'dudina-anna@yandex.ru',
+                ],
                 'coords' => false,
                 'seo' => 'Печать фото на холсте - новинка, которая радует всех любителей прекрасного. Личной фотографией, напечатанной на настоящем холсте, который натянут на подрамник, можно украсить дизайн квартиры или подарить близкому человеку. Сделать заказ раньше можно было только через интернет. Получить картину заказчик мог только по почте или курьером, дождавшись нужное количество времени. Теперь заветное желание исполнить гораздо проще, ведь точка по приему и выдаче заказов работает прямо в Старом Осколе.
 
@@ -46,7 +55,11 @@ class Locations
                 'name' => 'Воронеж',
                 'nameForm' => 'Воронеже',
                 'phone' => '+7 (900) 933-15-44',
-                'email' => 'voronezh@holstor.ru, a.pravotorov@gmail.com, dudina-anna@yandex.ru',
+                'email' => [
+                    'voronezh@holstor.ru',
+                    'a.pravotorov@gmail.com',
+                    'dudina-anna@yandex.ru',
+                ],
                 'vk' => 'holstor36',
                 'address' => 'Воронеж, Московский просп., 129/1, ТРЦ «Московский проспект», 2 этаж',
                 'coords' => [51.717993, 39.178539],
@@ -91,7 +104,13 @@ class Locations
                 'code' => 'kursk',
                 'name' => 'Курск',
                 'nameForm' => 'Курске',
-                'email' => 'kursk@holstor.ru, a.pravotorov@gmail.com, zakaz@holstor.ru, g9192821888@gmail.com, dudina-anna@yandex.ru',
+                'email' => [
+                    'kursk@holstor.ru',
+                    'a.pravotorov@gmail.com',
+                    'zakaz@holstor.ru',
+                    'g9192821888@gmail.com',
+                    'dudina-anna@yandex.ru',
+                ],
                 'coords' => false,
             ]),
             new Location([
@@ -100,7 +119,10 @@ class Locations
                 'name' => 'Орел',
                 'nameForm' => 'Орле',
                 'phone' => '+7 (919) 282-83-33',
-                'email' => 'zakaz@holstor.ru, dudina-anna@yandex.ru',
+                'email' => [
+                    'zakaz@holstor.ru',
+                    'dudina-anna@yandex.ru',
+                ],
                 'vk' => 'holstor57',
                 'coords' => false,
             ]),

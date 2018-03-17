@@ -9,7 +9,12 @@ class Location
     public $name;
     public $nameForm;
     public $phone = '+7 (4722) 37-12-32';
-    public $email = 'holstor@yandex.ru, holstor31@gmail.com, a.pravotorov@gmail.com, dudina-anna@yandex.ru';
+    public $email = [
+        'holstor@yandex.ru',
+        'holstor31@gmail.com',
+        'a.pravotorov@gmail.com',
+        'dudina-anna@yandex.ru',
+    ];
     public $vk = 'holstore';
     public $instagram = 'holstor31';
     public $address = 'Богдана Хмельницкого просп., 137, Белгород, Белгородская обл., 308010';

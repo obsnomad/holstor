@@ -1,15 +1,15 @@
 @if($name)
-    Имя: {{ $name }}
+Имя: {{ $name }}
 @endif
 @if($phone)
-    Телефон: {{ $phone }}
+Телефон: {{ $phone }}
 @endif
 @if($email)
-    E-mail: {{ $email }}
+E-mail: {{ $email }}
 @endif
 @if($ip)
-    IP-адрес: {{ $ip }}
+IP-адрес: {{ $ip }}
 @endif
 @if($city)
-    Город: {{ $city }}
+Город: {{ $city }}
 @endif
