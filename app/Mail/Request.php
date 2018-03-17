@@ -45,7 +45,7 @@ class Request extends Mailable
      */
     public function build()
     {
-        return $this->from('noreply@holstor.ru')
+        return $this->from(env('MAIL_USERNAME'))
             ->subject($this->subject)
             ->replyTo($this->email, $this->name)
             ->text('email.request');
