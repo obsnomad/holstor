@@ -237,12 +237,11 @@ footer {
   }
 }
 
-#main {
+.main-slider {
   background: url('/images/slide1.jpg') top center no-repeat darken($link-color, 20);
   background-size: cover;
   height: 400px;
   color: #fff;
-  text-shadow: $carousel-text-shadow;
   text-align: center;
   font-size: 18px;
 
@@ -255,6 +254,16 @@ footer {
       bottom: 30px;
       left: 0;
     }
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-top: 0;
   }
 
   .btn {
@@ -567,7 +576,6 @@ footer {
   font-size: 18px;
 
   form {
-    max-width: 300px;
     margin: 20px auto 0;
   }
 
@@ -580,4 +588,68 @@ footer {
     color: $text-color;
     width: 100%;
   }
+}
+
+#map {
+  height: 400px;
+}
+
+.map {
+  position: relative;
+  height: auto;
+
+  @include breakpoint(sm) {
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      padding: 20px 0;
+    }
+
+    .container {
+      > * {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+  }
+
+  &-content {
+    .container > div > div {
+      @include set-inline-parent(30px);
+    }
+
+    .fab {
+      background: $text-color;
+      color: #fff;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+
+      & + * {
+        margin-left: 5px;
+      }
+
+      &.fa-vk {
+        background: #4a76a8;
+      }
+
+      &.fa-instagram {
+        background: linear-gradient(to right top, #fa9433 0, #dc4162 50%, #a637a6 100%);
+      }
+    }
+  }
+}
+
+.block-gray {
+  background: #c6c6c6;
 }

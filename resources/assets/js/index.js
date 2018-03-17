@@ -1,31 +1,17 @@
 let map,
-    place,
-    activeLocation = $('li.active', '.locations').first(),
-    coords = [activeLocation.data('lat'), activeLocation.data('lon')];
-if (activeLocation.length === 1) {
+    place;
+if($('#map').length > 0) {
     ymaps.ready(function () {
         map = new ymaps.Map('map', {
             center: coords,
-            zoom: 17,
+            zoom: 16,
             controls: ['zoomControl', 'geolocationControl']
         });
-        place = new ymaps.Placemark(coords, {
-            hintContent: activeLocation.data('text')
-        }, {
-            preset: 'islands#redIcon'
-        });
+        place = new ymaps.Placemark(coords);
         map.behaviors.disable('scrollZoom');
         map.geoObjects.add(place);
     });
 }
-
-$('li', '.locations').click(function (e) {
-    e.preventDefault();
-    map.setCenter([$(this).data('lat'), $(this).data('lon')]);
-    place.geometry.setCoordinates([$(this).data('lat'), $(this).data('lon')]);
-    $('li.active', '.locations').removeClass('active');
-    $(this).addClass('active');
-});
 
 $('.styles-item').click(function (e) {
     e.preventDefault();
@@ -77,9 +63,9 @@ $('#work-carousel').owlCarousel({
     autoplay: true
 });
 
-$('form', '.form').submit(function () {
-    $.post($(this).attr('action'), $(this).serialize(), function (result) {
-        console.log(result);
+$('form').submit(function () {
+    $.post($(this).attr('action'), $(this).serialize(), function () {
+        alert('Спасибо, ваш запрос успешно отправлен! Мы позвоним или напишем вам в ближайшее время!');
     }).fail(function () {
         alert('Не удалось отправить запрос. Пожалуйста, попробуйте еще раз.');
     });

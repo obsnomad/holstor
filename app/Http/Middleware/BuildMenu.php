@@ -26,7 +26,7 @@ class BuildMenu
             $menu->add('Цены', ['url' => '#prices']);
             $menu->add('Отзывы', ['url' => '#reviews']);
             $menu->add('Контакты', ['url' => '#contacts']);
-            //$menu->add('Франшиза', ['url' => '#franch']);
+            $menu->add('Франшиза', ['url' => '#franch']);
         });
         return $next($request);
     }

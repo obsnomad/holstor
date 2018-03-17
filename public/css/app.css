@@ -8467,7 +8467,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 60px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .pad {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -8831,33 +8831,42 @@ footer {
   color: #d00000;
 }
 
-#main {
+.main-slider {
   background: url("/images/slide1.jpg") top center no-repeat #637311;
   background-size: cover;
   height: 400px;
   color: #fff;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
   text-align: center;
   font-size: 18px;
 }
 
-#main .container {
+.main-slider .container {
   position: relative;
   height: 100%;
 }
 
-#main .container > * {
+.main-slider .container > * {
   position: absolute;
   bottom: 30px;
   left: 0;
 }
 
-#main .btn {
+.main-slider .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+.main-slider h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.main-slider .btn {
   text-shadow: none;
 }
 
 @media (max-width: 480px) {
-  #main h1 {
+  .main-slider h1 {
     font-size: 24px;
   }
 }
@@ -9197,7 +9206,6 @@ footer {
 }
 
 .form form {
-  max-width: 300px;
   margin: 20px auto 0;
 }
 
@@ -9209,4 +9217,70 @@ footer {
 .form input {
   color: #404548;
   width: 100%;
+}
+
+#map {
+  height: 400px;
+}
+
+.map {
+  position: relative;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .map-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 20px 0;
+  }
+  .map .container > * {
+    background: #fff;
+    padding: 20px;
+    -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  .map h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+}
+
+.map-content .container > div > div {
+  font-size: 0;
+}
+
+.map-content .container > div > div > * {
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.map-content .fab {
+  background: #404548;
+  color: #fff;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.map-content .fab + * {
+  margin-left: 5px;
+}
+
+.map-content .fab.fa-vk {
+  background: #4a76a8;
+}
+
+.map-content .fab.fa-instagram {
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0, #fa9433), color-stop(50%, #dc4162), to(#a637a6));
+  background: linear-gradient(to right top, #fa9433 0, #dc4162 50%, #a637a6 100%);
+}
+
+.block-gray {
+  background: #c6c6c6;
 }

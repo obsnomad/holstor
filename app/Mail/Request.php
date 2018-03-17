@@ -11,22 +11,31 @@ class Request extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $subject;
     public $name;
     public $phone;
     public $email;
+    public $ip;
+    public $city;
 
     /**
      * Create a new message instance.
      *
+     * @param $subject
      * @param $name
      * @param $phone
      * @param $email
+     * @param $ip
+     * @param $city
      */
-    public function __construct($name, $phone, $email)
+    public function __construct($subject, $name, $phone, $email, $ip, $city)
     {
+        $this->subject = $subject;
         $this->name = $name;
         $this->phone = $phone;
         $this->email = $email;
+        $this->ip = $ip;
+        $this->city = $city;
     }
 
     /**
@@ -37,6 +46,8 @@ class Request extends Mailable
     public function build()
     {
         return $this->from('noreply@holstor.ru')
+            ->subject($this->subject)
+            ->replyTo($this->email, $this->name)
             ->text('email.request');
     }
 }

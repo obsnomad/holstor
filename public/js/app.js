@@ -11177,6 +11177,9 @@ $('a[href*="/#"]').click(function (e) {
     e.preventDefault();
     var href = $(this).attr('href');
     href = href.slice(href.indexOf('#'));
+    if ($(this).parents('.mfp-content').length > 0) {
+        $.magnificPopup.close();
+    }
     $.scrollTo($(href).offset().top - 52, 500);
 });
 
@@ -11204,7 +11207,7 @@ $(window).on('load resize scroll', function () {
     $('a[href$=' + id + ']').parent().addClass('active');
 });
 
-$('#phone').mask('+7 (999) 999-99-99');
+$('.input-phone').mask('+7 (999) 999-99-99');
 
 /***/ }),
 /* 10 */

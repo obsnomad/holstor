@@ -6,13 +6,15 @@
 
 @section('content')
 
-    <section id="main">
+    <section class="main-slider">
         <div class="container">
             <div class="col-lg-4 col-lg-offset-7 col-md-5 col-md-offset-6 col-xs-12">
-                <h1>Холстор — мастерская фото на холсте</h1>
-                <p>В нашей мастерской вы можете заказать печать фотографий на холсте в уникальном стиле и другие
-                    сувениры для близких и друзей!</p>
-                <a href="/#contacts" class="btn btn-lg btn-primary">Получить макет</a>
+                <div class="overlay">
+                    <h1>Холстор — мастерская фото на холсте</h1>
+                    <p>В нашей мастерской вы можете заказать печать фотографий на холсте в уникальном стиле и другие
+                        сувениры для близких и друзей!</p>
+                    <a href="/#contacts" class="btn btn-lg btn-primary">Получить макет</a>
+                </div>
             </div>
         </div>
     </section>
@@ -437,34 +439,124 @@
                     Удивите себя и своих близких!
                 </h2>
                 <p>
-                    Фото на холсте это стильно, модно и оригинально.<br />
-                    Заполните форму и получите макет вашей будущей картины!<br />
+                    Фото на холсте это стильно, модно и оригинально.<br/>
+                    Заполните форму и получите макет вашей будущей картины!<br/>
                     При онлайн заявке скидка на изготовление 100 рублей!
                 </p>
-                <form action="{{ route('request') }}" class="form-horizontal">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Ваш телефон <span>*</span></label>
-                        <input type="text" id="phone" name="phone" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Ваш Email</label>
-                        <input type="email" id="email" name="email" />
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-lg btn-primary btn-block">Получить макет</button>
-                    </div>
-                </form>
+                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                    <form action="{{ route('order') }}">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" name="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Ваш телефон <span>*</span></label>
+                            <input type="text" class="form-control input-phone" id="phone" name="phone" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Ваш Email</label>
+                            <input type="email" class="form-control" id="email" name="email"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-primary btn-block">Получить макет</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+
+    @if($location->coords)
+        <section class="map">
+            <div class="map-content">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Холстор {{ $location->nameForm ? "в {$location->nameForm}" : '' }}</h2>
+                        @if($location->address)
+                            <p>
+                                {{ $location->address }}
+                            </p>
+                        @endif
+                        @if($location->phone)
+                            <p>
+                                <b>Телефон:</b> <span class="text-nowrap">{{ $location->phone }}</span>
+                            </p>
+                        @endif
+                        @if($location->schedule)
+                            <p>
+                                <b>Режиме работы:</b> {{ $location->schedule }}
+                            </p>
+                        @endif
+                        <div>
+                            @if($location->vk)
+                                <a href="https://vk.com/{{ $location->vk }}" target="_blank" class="fab fa-vk"></a>
+                            @endif
+                            @if($location->instagram)
+                                <a href="https://instagram.com/{{ $location->instagram }}" target="_blank"
+                                   class="fab fa-instagram"></a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+        </section>
+    @endif
+
+    <section id="franch" class="franch pad">
+        <div class="container">
+            <h2 class="text-center">Откройте свой «Холстор»!</h2>
+            <p class="text-center">
+                Если в вашем городе еще не открылся «Холстор», то вы можете сделать это сами!<br/>
+                Для этого достаточно заполнить форму, и мы вышлем вам презентацию.
+            </p>
+            <div class="clearfix pad-top">
+                <div class="hidden-xs col-sm-6 col-md-4 col-md-offset-2">
+                    <img src="/images/franch.jpg" alt="">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <form action="{{ route('franch') }}">
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label for="franch-name">Ваше имя <span>*</span></label>
+                            <input type="text" class="form-control" id="franch-name" name="name" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="franch-city">Ваш город <span>*</span></label>
+                            <input type="text" class="form-control" id="franch-city" name="city" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="franch-email">Ваш Email <span>*</span></label>
+                            <input type="email" class="form-control" id="franch-email" name="email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="franch-phone">Ваш телефон <span>*</span></label>
+                            <input type="text" class="form-control input-phone" id="franch-phone" name="phone"
+                                   required/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-primary btn-block">Получить макет</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @if($location->seo)
+        <section class="block-gray pad">
+            <div class="container">
+                {!! $location->seo !!}
+            </div>
+        </section>
+    @endif
 @endsection
 
 @push('js')
+    <script>
+        var coords = @json($location->coords);
+    </script>
     <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="{{ asset('js/index.js') }}"></script>
 @endpush

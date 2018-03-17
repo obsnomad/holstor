@@ -7,10 +7,14 @@ class Location
     public $id;
     public $code;
     public $name;
-    public $phone;
-    public $email;
+    public $nameForm;
+    public $phone = '+7 (4722) 37-12-32';
+    public $email = 'holstor@yandex.ru, holstor31@gmail.com, a.pravotorov@gmail.com, dudina-anna@yandex.ru';
     public $vk = 'holstore';
     public $instagram = 'holstor31';
+    public $address = 'Богдана Хмельницкого просп., 137, Белгород, Белгородская обл., 308010';
+    public $coords = [50.632629, 36.570918];
+    public $url;
     public $popular = [
         '{size1}' => '40x60',
         '{size2}' => '50x70',
@@ -46,24 +50,34 @@ class Location
             '40x120' => '2690',
         ],
     ];
+    public $schedule = 'ежедневно с 10:00 до 22:00';
+    public $seo;
+    protected $data;
 
-    public function __construct($id = null, $code = null, $name = null, $phone = null, $email = null,
-                                $vk = null, $instagram = null,
-                                $popular = null, $prices = null)
+    public function __construct($data)
     {
-        $this->id = $id;
-        $this->code = $code;
-        $this->name = $name;
-        $this->phone = $phone;
-        $this->email = $email;
-        $this->vk = !is_null($vk) ? $vk : $this->vk;
-        $this->instagram = !is_null($instagram) ? $instagram : $this->instagram;
-        $this->url = str_replace(env('APP_DOMAIN'), $code . '.' . env('APP_DOMAIN'), \Request::fullUrl());
-        $this->popular = array_replace($this->popular, (array)$popular);
-        $this->prices = !is_null($prices) ? $prices : $this->prices;
-        foreach($this->prices as $type => &$prices) {
+        $this->data = (array)$data;
+        foreach ([
+                     'id',
+                     'code',
+                     'name',
+                     'phone',
+                     'email',
+                     'vk',
+                     'instagram',
+                     'address',
+                     'coords',
+                     'prices',
+                     'schedule',
+                 ] as $key) {
+            $this->$key = $this->getValue($key);
+        }
+        $this->nameForm = $this->getValue('nameForm') ?: $this->name;
+        $this->url = str_replace(env('APP_DOMAIN'), $this->code . '.' . env('APP_DOMAIN'), \Request::fullUrl());
+        $this->popular = array_replace($this->popular, (array)$this->getValue('popular'));
+        foreach ($this->prices as $type => &$prices) {
             $items = [];
-            foreach($prices as $size => $price) {
+            foreach ($prices as $size => $price) {
                 $items[] = (object)[
                     'size' => str_replace(['!', 'x'], ['', ' x '], $size) . ' см',
                     'hit' => substr($size, -1) == '!',
@@ -80,5 +94,18 @@ class Location
             ];
         }
         unset($prices);
+        $this->seo = nl2br($this->getValue('seo'));
+    }
+
+    private function getValue($key, $default = true)
+    {
+        $value = null;
+        if ($this->data && key_exists($key, $this->data)) {
+            $value = $this->data[$key];
+        }
+        if ($default) {
+            return !is_null($value) ? $value : $this->$key;
+        }
+        return null;
     }
 }
