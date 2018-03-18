@@ -653,3 +653,17 @@ footer {
 .block-gray {
   background: #c6c6c6;
 }
+
+.alertify-logs {
+  > * {
+    &, &.default {
+      background: #404040;
+    }
+    &.error {
+      background: #f44336;
+    }
+    &.success {
+      background: #4caf50;
+    }
+  }
+}

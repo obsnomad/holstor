@@ -1,3 +1,5 @@
+let alertify = require('alertify.js');
+
 let map,
     place;
 if($('#map').length > 0) {
@@ -64,10 +66,13 @@ $('#work-carousel').owlCarousel({
 });
 
 $('form').submit(function () {
+    $('button[type="submit"]').attr('disabled', true);
     $.post($(this).attr('action'), $(this).serialize(), function () {
-        alert('Спасибо, ваш запрос успешно отправлен! Мы позвоним или напишем вам в ближайшее время!');
+        alertify.success('Спасибо, ваш запрос успешно отправлен! Мы позвоним или напишем вам в ближайшее время!');
+        $('button[type="submit"]').removeAttr('disabled');
     }).fail(function () {
-        alert('Не удалось отправить запрос. Пожалуйста, попробуйте еще раз.');
+        alertify.error('Не удалось отправить запрос. Пожалуйста, попробуйте еще раз.');
+        $('button[type="submit"]').removeAttr('disabled');
     });
     return false;
 });
