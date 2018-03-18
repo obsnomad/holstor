@@ -245,6 +245,10 @@ footer {
   text-align: center;
   font-size: 18px;
 
+  @include breakpoint(1440px) {
+    height: 540px;
+  }
+
   .container {
     position: relative;
     height: 100%;
@@ -564,6 +568,10 @@ footer {
       height: 400px;
       background: top center no-repeat;
       background-size: cover;
+
+      @include breakpoint(1440px) {
+        height: 600px;
+      }
     }
   }
 }
