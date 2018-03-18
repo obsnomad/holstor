@@ -434,7 +434,7 @@ footer {
   }
 
   &-item {
-    max-width: 340px;
+    max-width: 320px;
     padding: 10px;
     position: relative;
     margin: auto;
@@ -609,7 +609,7 @@ footer {
   @include breakpoint(sm) {
     &-content {
       position: absolute;
-      top: 0;
+      top: 20px;
       left: 0;
       right: 0;
       z-index: 10;
@@ -631,6 +631,8 @@ footer {
   }
 
   &-content {
+    padding: 0 0 20px;
+
     .container > div > div {
       @include set-inline-parent(30px);
     }

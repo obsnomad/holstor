@@ -2,7 +2,7 @@ let alertify = require('alertify.js');
 
 let map,
     place;
-if($('#map').length > 0) {
+if ($('#map').length > 0) {
     ymaps.ready(function () {
         map = new ymaps.Map('map', {
             center: coords,
@@ -10,7 +10,7 @@ if($('#map').length > 0) {
             controls: ['zoomControl', 'geolocationControl']
         });
         place = new ymaps.Placemark(coords);
-        map.behaviors.disable('scrollZoom');
+        map.behaviors.disable(['scrollZoom', 'drag']);
         map.geoObjects.add(place);
     });
 }
