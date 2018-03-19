@@ -504,45 +504,47 @@
         </section>
     @endif
 
-    <section id="franch" class="franch pad">
-        <div class="container">
-            <h2 class="text-center">Откройте свой «Холстор»!</h2>
-            <p class="text-center">
-                Если в вашем городе еще не открылся «Холстор», то вы можете сделать это сами!<br/>
-                Для этого достаточно заполнить форму, и мы вышлем вам презентацию.
-            </p>
-            <div class="clearfix pad-top">
-                <div class="hidden-xs col-sm-6 col-md-4 col-md-offset-2">
-                    <img src="/images/franch.jpg" alt="">
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <form action="{{ route('franch') }}">
-                        {{ csrf_field() }}
-                        <div class="form-group">
-                            <label for="franch-name">Ваше имя <span>*</span></label>
-                            <input type="text" class="form-control" id="franch-name" name="name" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="franch-city">Ваш город <span>*</span></label>
-                            <input type="text" class="form-control" id="franch-city" name="city" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="franch-email">Ваш Email <span>*</span></label>
-                            <input type="email" class="form-control" id="franch-email" name="email" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="franch-phone">Ваш телефон <span>*</span></label>
-                            <input type="text" class="form-control input-phone" id="franch-phone" name="phone"
-                                   required/>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-lg btn-primary btn-block">Получить макет</button>
-                        </div>
-                    </form>
+    @if(!$location->id)
+        <section id="franch" class="franch pad">
+            <div class="container">
+                <h2 class="text-center">Откройте свой «Холстор»!</h2>
+                <p class="text-center">
+                    Если в вашем городе еще не открылся «Холстор», то вы можете сделать это сами!<br/>
+                    Для этого достаточно заполнить форму, и мы вышлем вам презентацию.
+                </p>
+                <div class="clearfix pad-top">
+                    <div class="hidden-xs col-sm-6 col-md-4 col-md-offset-2">
+                        <img src="/images/franch.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <form action="{{ route('franch') }}">
+                            {{ csrf_field() }}
+                            <div class="form-group">
+                                <label for="franch-name">Ваше имя <span>*</span></label>
+                                <input type="text" class="form-control" id="franch-name" name="name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="franch-city">Ваш город <span>*</span></label>
+                                <input type="text" class="form-control" id="franch-city" name="city" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="franch-email">Ваш Email <span>*</span></label>
+                                <input type="email" class="form-control" id="franch-email" name="email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="franch-phone">Ваш телефон <span>*</span></label>
+                                <input type="text" class="form-control input-phone" id="franch-phone" name="phone"
+                                       required/>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-primary btn-block">Получить макет</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     @if($location->seo)
         <section class="block-gray pad">
