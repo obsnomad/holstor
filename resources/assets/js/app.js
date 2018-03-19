@@ -51,7 +51,7 @@ $('a[href*="/#"]').click(function (e) {
     if($(this).parents('.mfp-content').length > 0) {
         $.magnificPopup.close();
     }
-    $.scrollTo($(href).offset().top - 52, 500);
+    $.scrollTo($(href).offset().top - 52, 700);
 });
 
 let pos = {};
