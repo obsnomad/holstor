@@ -20,7 +20,6 @@ class Locations
                 'email' => [
                     'holstor@yandex.ru',
                     'holstor31@gmail.com',
-                    'a.pravotorov@gmail.com',
                     'dudina-anna@yandex.ru',
                 ],
                 'vk' => 'holstor31',
@@ -38,7 +37,6 @@ class Locations
                 'nameForm' => 'Старом Осколе',
                 'email' => [
                     'oskol@holstor.ru',
-                    'a.pravotorov@gmail.com',
                     'dudina-anna@yandex.ru',
                 ],
                 'coords' => false,
@@ -57,7 +55,6 @@ class Locations
                 'email' => [
                     'voronezh@holstor.ru',
                     'holstor36@gmail.com',
-                    'a.pravotorov@gmail.com',
                     'dudina-anna@yandex.ru',
                 ],
                 'vk' => 'holstor36',
@@ -104,7 +101,6 @@ class Locations
                 'nameForm' => 'Курске',
                 'email' => [
                     'kursk@holstor.ru',
-                    'a.pravotorov@gmail.com',
                     'zakaz@holstor.ru',
                     'g9192821888@gmail.com',
                     'dudina-anna@yandex.ru',

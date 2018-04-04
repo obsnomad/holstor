@@ -12,7 +12,6 @@ class Location
     public $email = [
         'holstor@yandex.ru',
         'holstor31@gmail.com',
-        'a.pravotorov@gmail.com',
         'dudina-anna@yandex.ru',
     ];
     public $vk = 'holstore';
