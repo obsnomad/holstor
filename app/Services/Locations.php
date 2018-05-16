@@ -130,6 +130,32 @@ class Locations
                 'vk' => 'pechat_foto_na_holste_sevastopol',
                 'instagram' => 'holstor_sevastopol',
                 'coords' => false,
+                'popular' => [
+                    '{price1}' => '1690р.',
+                    '{price2}' => '2190р.',
+                    '{price3}' => '2190р.',
+                    '{price4}' => '2790р.',
+                ],
+                'prices' => [
+                    'rectangle' => [
+                        '30x40' => '1190',
+                        '40x60!' => '1690',
+                        '50x70!' => '2190',
+                        '60x80' => '2690',
+                        '80x120' => '3990',
+                    ],
+                    'square' => [
+                        '30x30' => '990',
+                        '40x40!' => '1390',
+                        '50x50!' => '1790',
+                        '60x60' => '2190',
+                        '100x100' => '3990',
+                    ],
+                    'panorama' => [
+                        '30x90' => '2190',
+                        '40x120' => '2690',
+                    ],
+                ],
             ]),
             new Location([
                 'id' => 23,
