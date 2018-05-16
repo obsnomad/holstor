@@ -134,7 +134,7 @@ class Locations
                     '{price1}' => '1690р.',
                     '{price2}' => '2190р.',
                     '{price3}' => '2190р.',
-                    '{price4}' => '2790р.',
+                    '{price4}' => '2690р.',
                 ],
                 'prices' => [
                     'rectangle' => [
