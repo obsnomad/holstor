@@ -46,8 +46,8 @@ class Location
             '60x60!' => '2590',
         ],
         'panorama' => [
-            '30x90' => 'по запросу',
-            '40x120' => 'по запросу',
+            '30x90' => '-',
+            '40x120' => '-',
         ],
     ];
     public $schedule = 'ежедневно с 10:00 до 22:00';
@@ -81,7 +81,7 @@ class Location
                 $items[] = (object)[
                     'size' => str_replace(['!', 'x'], ['', ' x '], $size) . ' см',
                     'hit' => substr($size, -1) == '!',
-                    'price' => "$price р.",
+                    'price' => $price != '-' ? "$price р." : 'по запросу',
                 ];
             }
             $prices = (object)[
