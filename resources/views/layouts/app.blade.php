@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css?v=1') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css?v=2') }}" rel="stylesheet">
     <link href="{{ asset('css/fontawesome-all.min.css') }}" rel="stylesheet">
 @stack('css')
 
