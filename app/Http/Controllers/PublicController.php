@@ -40,10 +40,11 @@ class PublicController extends Controller
         $data = \Request::validate([
             'name' => 'string',
             'phone' => 'required',
+            'city' => 'required',
             'email' => 'email',
         ]);
         \Mail::to($this->location->email)
-            ->send(new Request('Заказ картины', $data['name'], $data['phone'], $data['email'], \Request::ip(), $this->location->name));
+            ->send(new Request('Заказ картины', $data['name'], $data['phone'], $data['email'], \Request::ip(), $data['city'] ?: $this->location->name));
         if (!\Mail::failures()) {
             return response()->json(['result' => true]);
         }

@@ -451,6 +451,11 @@
                             <input type="text" class="form-control" id="name" name="name"/>
                         </div>
                         <div class="form-group">
+                            <label for="city">Ваш город <span>*</span></label>
+                            <input type="text" class="form-control" id="city" name="city" required
+                                   value="{{ $location->name }}"/>
+                        </div>
+                        <div class="form-group">
                             <label for="phone">Ваш телефон <span>*</span></label>
                             <input type="text" class="form-control input-phone" id="phone" name="phone" required/>
                         </div>
