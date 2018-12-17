@@ -41,7 +41,7 @@ class PublicController extends Controller
             'name' => 'string',
             'phone' => 'required',
             'city' => 'required',
-            'email' => 'email',
+            'email' => 'nullable|email',
         ]);
         \Mail::to($this->location->email)
             ->send(new Request('Заказ картины', $data['name'], $data['phone'], $data['email'], \Request::ip(), $data['city'] ?: $this->location->name));
