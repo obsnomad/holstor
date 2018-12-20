@@ -23,6 +23,7 @@ class Locations
                     'dudina-anna@yandex.ru',
                 ],
                 'vk' => 'holstor31',
+                'widgetId' => '30987685',
                 'address' => 'Белгород, просп. Богдана Хмельницкого, 137Т, ТРЦ «Мега ГРИНН», 1 этаж, возле магазина Летуаль',
                 'popular' => [
                     '{price1}' => '1390р.',
@@ -114,6 +115,7 @@ class Locations
                     'dudina-anna@yandex.ru',
                 ],
                 'vk' => 'holstor36',
+                'widgetId' => '136115481',
                 'address' => 'Воронеж, Московский просп., 129/1, ТРЦ «Московский проспект», 2 этаж',
                 'coords' => [51.717993, 39.178539],
                 'popular' => [

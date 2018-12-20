@@ -15,6 +15,7 @@ class Location
         'dudina-anna@yandex.ru',
     ];
     public $vk = 'holstore';
+    public $widgetId;
     public $instagram = 'holstor31';
     public $address = 'Богдана Хмельницкого просп., 137, Белгород, Белгородская обл., 308010';
     public $coords = [50.632629, 36.570918];
@@ -64,6 +65,7 @@ class Location
                      'phone',
                      'email',
                      'vk',
+                     'widgetId',
                      'instagram',
                      'address',
                      'coords',

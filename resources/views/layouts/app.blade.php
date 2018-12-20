@@ -9,7 +9,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Холстор - печать фото на холсте')</title>
-    <meta name="description" content="@yield('description', 'Холстор - печать фото на холсте. Более 12 различных стилей оформления. Быстрое изготовление и доставка.')">
+    <meta name="description"
+          content="@yield('description', 'Холстор - печать фото на холсте. Более 12 различных стилей оформления. Быстрое изготовление и доставка.')">
     <meta name="keywords"
           content="@yield('keywords', 'Холстор, печать на холсте, фото, печать фото, фото на холсте, печать на кружках, печать на футболках')">
 
@@ -109,35 +110,54 @@
     var domain = '{{ '.' . env('APP_DOMAIN') }}';
 </script>
 @stack('js')
+@if(!empty($location->widgetId))
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
+
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+        VK.Widgets.CommunityMessages("vk_community_messages", '{{ $location->widgetId }}', {
+            //expandTimeout: "5000",
+            tooltipButtonText: "Есть вопрос?"
+        });
+    </script>
+@endif
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter47928425 = new Ya.Metrika({
-                    id:47928425,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true,
-                    webvisor:true,
-                    trackHash:true
+                    id: 47928425,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true
                 });
-            } catch(e) { }
+            } catch (e) {
+            }
         });
 
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
 
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
+        } else {
+            f();
+        }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/47928425" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/47928425" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 </body>
 </html>
