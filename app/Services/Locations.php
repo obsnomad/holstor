@@ -17,11 +17,7 @@ class Locations
                 'code' => 'belgorod',
                 'name' => 'Белгород',
                 'nameForm' => 'Белгороде',
-                'email' => [
-                    'holstor@yandex.ru',
-                    'holstor31@gmail.com',
-                    'dudina-anna@yandex.ru',
-                ],
+                'email' => 'dudina-anna@yandex.ru',
                 'vk' => 'holstor31',
                 'widgetId' => '30987685',
                 'address' => 'Белгород, просп. Богдана Хмельницкого, 137Т, ТРЦ «Мега ГРИНН», 1 этаж, возле магазина Летуаль',
@@ -64,10 +60,7 @@ class Locations
                 'code' => 'oskol',
                 'name' => 'Старый Оскол',
                 'nameForm' => 'Старом Осколе',
-                'email' => [
-                    'oskol@holstor.ru',
-                    'dudina-anna@yandex.ru',
-                ],
+                'email' => 'dudina-anna@yandex.ru',
                 'coords' => false,
                 'popular' => [
                     '{price1}' => '1390р.',
@@ -109,11 +102,7 @@ class Locations
                 'name' => 'Воронеж',
                 'nameForm' => 'Воронеже',
                 'phone' => '+7 (900) 933-15-44',
-                'email' => [
-                    'voronezh@holstor.ru',
-                    'holstor36@gmail.com',
-                    'dudina-anna@yandex.ru',
-                ],
+                'email' => 'dudina-anna@yandex.ru',
                 'vk' => 'holstor36',
                 'widgetId' => '136115481',
                 'address' => 'Воронеж, Московский просп., 129/1, ТРЦ «Московский проспект», 2 этаж',
@@ -162,12 +151,7 @@ class Locations
                 'code' => 'kursk',
                 'name' => 'Курск',
                 'nameForm' => 'Курске',
-                'email' => [
-                    'kursk@holstor.ru',
-                    'zakaz@holstor.ru',
-                    'g9192821888@gmail.com',
-                    'dudina-anna@yandex.ru',
-                ],
+                'email' => 'dudina-anna@yandex.ru',
                 'coords' => false,
                 'popular' => [
                     '{price1}' => '1390р.',
@@ -204,10 +188,7 @@ class Locations
                 'name' => 'Орел',
                 'nameForm' => 'Орле',
                 'phone' => '+7 (919) 282-83-33',
-                'email' => [
-                    'zakaz@holstor.ru',
-                    'dudina-anna@yandex.ru',
-                ],
+                'email' => 'dudina-anna@yandex.ru',
                 'vk' => 'holstor57',
                 'coords' => false,
                 'popular' => [
