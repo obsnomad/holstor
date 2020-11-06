@@ -17,7 +17,7 @@ class Locations
                 'code' => 'belgorod',
                 'name' => 'Белгород',
                 'nameForm' => 'Белгороде',
-                'email' => 'dudina-anna@yandex.ru',
+                'email' => 'holstor31@gmail.com',
                 'vk' => 'holstor31',
                 'widgetId' => '30987685',
                 'address' => 'Белгород, просп. Богдана Хмельницкого, 137Т, ТРЦ «Мега ГРИНН», 1 этаж, возле магазина Летуаль',
@@ -60,7 +60,7 @@ class Locations
                 'code' => 'oskol',
                 'name' => 'Старый Оскол',
                 'nameForm' => 'Старом Осколе',
-                'email' => 'dudina-anna@yandex.ru',
+                'email' => 'holstor31@gmail.com',
                 'coords' => false,
                 'popular' => [
                     '{price1}' => '1890р.', // 40x60
@@ -102,7 +102,7 @@ class Locations
                 'name' => 'Воронеж',
                 'nameForm' => 'Воронеже',
                 'phone' => '+7 (900) 933-15-44',
-                'email' => 'dudina-anna@yandex.ru',
+                'email' => 'holstor31@gmail.com',
                 'vk' => 'holstor36',
                 'widgetId' => '136115481',
                 'address' => 'Воронеж, Московский просп., 129/1, ТРЦ «Московский проспект», 2 этаж',
@@ -151,7 +151,7 @@ class Locations
                 'code' => 'kursk',
                 'name' => 'Курск',
                 'nameForm' => 'Курске',
-                'email' => 'dudina-anna@yandex.ru',
+                'email' => 'holstor31@gmail.com',
                 'coords' => false,
                 'popular' => [
                     '{price1}' => '1890р.', // 40x60
@@ -188,7 +188,7 @@ class Locations
                 'name' => 'Орел',
                 'nameForm' => 'Орле',
                 'phone' => '+7 (919) 282-83-33',
-                'email' => 'dudina-anna@yandex.ru',
+                'email' => 'holstor31@gmail.com',
                 'vk' => 'holstor57',
                 'coords' => false,
                 'popular' => [

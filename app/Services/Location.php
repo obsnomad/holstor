@@ -10,7 +10,7 @@ class Location
     public $nameForm;
     public $phone = '+7 (4722) 37-12-32';
     public $email = [
-        'dudina-anna@yandex.ru',
+        'holstor31@gmail.com',
     ];
     public $vk = 'holstore';
     public $widgetId;

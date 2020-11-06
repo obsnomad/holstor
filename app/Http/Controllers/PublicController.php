@@ -59,7 +59,7 @@ class PublicController extends Controller
             'email' => 'required|email',
             'city' => 'required',
         ]);
-        $result = \Mail::to('dudina-anna@yandex.ru')
+        $result = \Mail::to('holstor31@gmail.com')
             ->send(new Request('Запрос на франшизу', $data['name'], $data['phone'], $data['email'], \Request::ip(), $data['city']));
         if ($result) {
             return response()->json(['result' => $result]);
